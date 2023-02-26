@@ -122,8 +122,8 @@ const Task = () => {
             />
           </DialogContent>
           <DialogActions>
-            <Button onClick={updateTask}>Update</Button>
-            <Button onClick={handleClose}>Cancel</Button>
+            <NavLink to="/tab"><Button onClick={updateTask}>Update</Button></NavLink>
+            <Button href='/tab' onClick={handleClose}>Cancel</Button>
           </DialogActions>
         </Dialog>
       </div>
