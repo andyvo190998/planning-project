@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/planning-project/static/css/main.07218326.css",
-    "main.js": "/planning-project/static/js/main.56cc9039.js",
+    "main.js": "/planning-project/static/js/main.f7ace1dc.js",
     "index.html": "/planning-project/index.html",
     "main.07218326.css.map": "/planning-project/static/css/main.07218326.css.map",
-    "main.56cc9039.js.map": "/planning-project/static/js/main.56cc9039.js.map"
+    "main.f7ace1dc.js.map": "/planning-project/static/js/main.f7ace1dc.js.map"
   },
   "entrypoints": [
     "static/css/main.07218326.css",
-    "static/js/main.56cc9039.js"
+    "static/js/main.f7ace1dc.js"
   ]
 }
