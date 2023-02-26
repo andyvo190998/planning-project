@@ -1,0 +1,313 @@
+.btn-submit {
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+time progress {
+  width: 20%;
+  min-width: 20px;
+}
+
+.task-container {
+  margin-top: 2rem;
+  margin-left: 25px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task {
+  background: #FFF;
+  width: 120px;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  padding: 40px 20px;
+  border-radius: 5px;
+  border: solid black;
+  color: black;
+  text-align: center;
+}
+
+.btn-add-task {
+  background: #FFF;
+  width: 120px;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  padding: 34px 14px;
+  border-radius: 5px;
+  border: solid black;
+  color: black;
+  text-align: center;
+}
+
+.btn-add-task:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.task-disable {
+  width: 120px;
+  margin: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  padding: 40px 20px;
+  border-radius: 5px;
+  border: solid rgb(97, 94, 94);
+  color: black;
+  text-align: center;
+  background-color: rgb(135, 155, 148);
+}
+
+.task:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+a.link-task {
+  color: black;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  pointer-events: all;
+  margin-top: 5px;
+}
+
+
+
+/* form {
+  padding-left: 30px;
+  padding-top: 30px;
+} */
+
+/* input[type=checkbox]+label {
+  display: block;
+  cursor: pointer;
+  padding: 0.2em;
+  width: 100%;
+} */
+
+/* input[type=checkbox] {
+  display: none;
+} */
+
+/* input[type=checkbox]+label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+} */
+
+/* input[type=checkbox]+label:active:before {
+  transform: scale(0);
+} */
+
+/* input[type=checkbox]:checked+label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+} */
+
+/* input[type=checkbox]:disabled+label:before {
+  transform: scale(1);
+  border-color: #aaa;
+} */
+
+/* input[type=checkbox]:checked:disabled+label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+} */
+
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.task-board {
+  display: flex;
+}
+
+
+
+.delete-button {
+  background-color: #aaa;
+  margin: 10px;
+}
+
+
+.add-task-form {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.form {
+  /* background-color: #aaa; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-left: 10vh;
+  padding-right: 10vh; */
+  padding-bottom: 10vh;
+  width: 50%;
+}
+
+.link-go-back {
+  color: black;
+  text-decoration: none;
+  background-color: #aaa;
+  padding: 10px;
+}
+
+.link-go-back:hover {
+  /* letter-spacing: 1px; */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+
+.task-add {
+  margin-left: 20px;
+  /* margin-top: 20px; */
+  background-color: aquamarine;
+  padding-left: 30px;
+  cursor: pointer;
+  border: none;
+  height: 4.5rem;
+  margin-bottom: 10px;
+  color: black;
+  width: 32%;
+
+
+}
+
+/* test */
+.events li {
+  display: flex;
+  color: #999;
+}
+
+.events time {
+  position: relative;
+  /* padding: 0 1.5em; */
+  width: 10%;
+  text-align: center;
+
+}
+
+
+.events .time-completed::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background: rgb(98, 93, 93);
+  border: 1px rgb(62, 53, 53) solid;
+  width: .8em;
+  height: .8em;
+}
+
+.events .time-progress::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background: rgb(187, 225, 109);
+  border: 1px rgb(62, 53, 53) solid;
+  width: .8em;
+  height: .8em;
+}
+
+.events .time-next::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  border-radius: 50%;
+  background: rgb(239, 240, 237);
+  border: 1px rgb(62, 53, 53) solid;
+  width: .8em;
+  height: .8em;
+}
+
+
+.events span {
+  padding: 0 1.5em 1.5em 1.5em;
+  position: relative;
+  width: 100%;
+}
+
+.events span::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  height: 100%;
+  border-left: 1px rgb(218, 140, 140) solid;
+  width: 100%;
+}
+
+.events span.last-task::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  height: 100%;
+  border-left: 1px white solid;
+  width: 100%;
+}
+
+.events strong {
+  display: block;
+  font-weight: bolder;
+}
+
+.events {
+  margin: 1em;
+  width: 100%;
+}
+
+.events,
+.events *::before,
+.events *::after {
+  box-sizing: border-box;
+  font-family: arial;
+}

@@ -1,0 +1,33 @@
+
+
+.task-description {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.task-item {
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.go-back {
+    text-decoration: none;
+    background-color: rgb(141, 188, 229);
+    color: black;
+    padding: 5px;
+    margin-top: 10rem;
+    border-radius: 5px;
+}
+
+.go-back:hover {
+    /* letter-spacing: 1px; */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+.description-container {
+    margin: 2rem;
+    width: 50%;
+}
