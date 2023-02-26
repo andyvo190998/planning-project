@@ -7,7 +7,7 @@ import {
     FIND_PROGRESS_TASK,
 } from "../constants/types"
 
-
+// create initial state
 const initialState = {
     tab: [],
     currentTask: [],

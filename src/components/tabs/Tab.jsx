@@ -25,7 +25,7 @@ const Tab = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    //this loop helps to find the next task that need to be done and call to redux to update store
+    //this loop helps to find the next task that need to be done and dispatch to redux to update store
     for (let i = 0; i < taskList.length; i++) {
       if (taskList[i].completed === false) {
         dispatch(actionFindProgressTask(taskList[i]))
@@ -94,7 +94,7 @@ const Tab = () => {
     <div>
       <NavBar />
       <div className="task-container">
-        {/* map method loops through an array that contains all tasks and then display task name on a square box container, user can click on that box to see all the information of a specific task */}
+        {/* map method loops through an array that contains all tasks object and then display task name on a square box container, user can click on that box to see all the information of a specific task */}
         {taskList.map(item => {
           if (item.completed === true) {
             return (
