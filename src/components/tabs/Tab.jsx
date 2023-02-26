@@ -173,7 +173,7 @@ const Tab = () => {
               autoFocus
               margin="dense"
               id="name"
-              label="Task Number"
+              label="Task Name"
               type="text"
               fullWidth
               variant="standard"

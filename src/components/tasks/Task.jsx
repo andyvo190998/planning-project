@@ -23,7 +23,7 @@ const Task = () => {
 
   useEffect(() => {
     if (task.length === 1) {
-      setTaskNumberUpdate(task[0].taskName);
+      setTaskNameUpdate(task[0].taskName);
       setDescriptionUpdate(task[0].taskDecription)
       setId(task[0]._id)
     }
@@ -44,10 +44,10 @@ const Task = () => {
   //update task function. updated information will be stored in updateTask object and send to redux action to update
   const updateTask = () => {
     const taskUpdate = {
-      taskName: taskNumberUpdate,
+      taskName: taskNameUpdate,
       taskDecription: descriptionUpdate
     }
-    if (taskNumberUpdate === "" || taskNumberUpdate === "") {
+    if (taskNameUpdate === "" || taskNameUpdate === "") {
       alert("You need to type in input field!")
     } else {
       dispatch(actionUpdateTask(task[0]._id, taskUpdate))
@@ -57,13 +57,13 @@ const Task = () => {
   }
 
   //variable for handling update
-  const [taskNumberUpdate, setTaskNumberUpdate] = useState("")
+  const [taskNameUpdate, setTaskNameUpdate] = useState("")
   const [descriptionUpdate, setDescriptionUpdate] = useState("")
   const [id, setId] = useState("")
 
   // handle onchange updating new task
   const handleNameUpdate = (e) => {
-    setTaskNumberUpdate(e.target.value)
+    setTaskNameUpdate(e.target.value)
   }
   const handleDescriptionUpdate = (e) => {
     setDescriptionUpdate(e.target.value)
@@ -102,11 +102,11 @@ const Task = () => {
               autoFocus
               margin="dense"
               id="name"
-              label="Task Number"
+              label="Task Name"
               type="text"
               fullWidth
               variant="standard"
-              value={taskNumberUpdate}
+              value={taskNameUpdate}
               onChange={handleNameUpdate}
             />
             <TextField
@@ -123,7 +123,7 @@ const Task = () => {
           </DialogContent>
           <DialogActions>
             <NavLink to="/tab"><Button onClick={updateTask}>Update</Button></NavLink>
-            <Button href='/tab' onClick={handleClose}>Cancel</Button>
+            {/* <Button href='/tab' onClick={handleClose}>Cancel</Button> */}
           </DialogActions>
         </Dialog>
       </div>
