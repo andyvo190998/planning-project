@@ -77,8 +77,8 @@ const Task = () => {
         <div></div>
         <div className='description-container'>
           <p className='task-item'><b>ID:</b> {id}</p>
-          <p className='task-item'><b>Name:</b> {taskNumberUpdate}</p>
-          <p className='task-item'><b>Description:</b> {descriptionUpdate}</p>
+          <p className='task-item'><b>Name:</b> {task[0].taskName}</p>
+          <p className='task-item'><b>Description:</b> {task[0].taskDecription}</p>
           <p className='task-item'><b>Completed status:</b> {JSON.stringify(task[0].completed)}</p>
           <NavLink className="go-back" to="/tab">Go Back</NavLink>
           <NavLink style={{ "marginLeft": "10px" }} onClick={handleClickOpen} className="go-back">Update</NavLink>
