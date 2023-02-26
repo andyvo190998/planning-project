@@ -20,7 +20,7 @@ const Tab = () => {
 
   //taskList contains an array with task objects inside in redux store
   const taskList = useSelector((state) => state.tab);
-  //progessTask is an array with an object of the next task that needs to be done inside
+  //progressTask is an array with an object of the next task that needs to be done inside
   const progressTask = useSelector((state) => state.progressTask);
   const dispatch = useDispatch()
 
@@ -35,7 +35,7 @@ const Tab = () => {
   }, [taskList, dispatch])
 
 
-  //this function dispatches actionUpdate to change completed to be true
+  //this function dispatches actionUpdate to change the task is in progress to be completed and move to the next task
   const submit = (e) => {
     dispatch(actionUpdate(progressTask._id))
     alert("Task completed")
@@ -94,11 +94,11 @@ const Tab = () => {
     <div>
       <NavBar />
       <div className="task-container">
-        {/* map method loops through an array that contains all tasks and then display task name on a square box container, user can click on that box to see all the informations of a specific task */}
+        {/* map method loops through an array that contains all tasks and then display task name on a square box container, user can click on that box to see all the information of a specific task */}
         {taskList.map(item => {
           if (item.completed === true) {
             return (
-              <NavLink onClick={() => dispatch(findTaskId(item._id))} to={`/task/${item._id}`} key={item._id} className='task-disable'>
+              <NavLink key={item._id} className='task-disable'>
                 {item.taskName}
               </NavLink>)
           } else {
@@ -119,7 +119,7 @@ const Tab = () => {
       <ul className="events">
         <button onClick={() => submit()} className='btn-submit'>Submit</button>
         {taskList.map(item => {
-          // check if task conpleted => turn into black
+          // check if task completed => turn into black
           if (item.completed === true) {
             return (
               <li key={item._id}>
