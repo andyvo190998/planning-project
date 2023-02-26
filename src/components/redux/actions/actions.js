@@ -8,19 +8,19 @@ export const findTaskId = (id) => async (dispatch) => {
     dispatch({ type: FIND_ID, payload: data })
 }
 
-// get all task from database
+// get all tasks from database and send them to reducer to store them
 export const fetchTask = () => async (dispatch) => {
     const { data } = await getTasks();
     dispatch({ type: FETCH_ALL, payload: data });
 };
 
-// user add new task
+// user add new task and send it to reducer to update task list
 export const addTask = (task) => async (dispatch) => {
     const { data } = await createTask(task);
     dispatch({ type: ADD_TASK, payload: data })
 };
 
-// Update task to completed
+// Update task to completed and send it to reducer to update task
 export const actionUpdate = (id) => async (dispatch) => {
     await updateComplete(id)
     const { data } = await getTasks();

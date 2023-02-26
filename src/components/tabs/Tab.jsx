@@ -35,7 +35,7 @@ const Tab = () => {
   }, [taskList, dispatch])
 
 
-  //this function dispatches an actionUpdate to change completed to be true
+  //this function dispatches actionUpdate to change completed to be true
   const submit = (e) => {
     dispatch(actionUpdate(progressTask._id))
     alert("Task completed")
@@ -47,7 +47,7 @@ const Tab = () => {
   }, [taskList.length, dispatch]);
 
 
-  // dialog
+  // open add task dialog
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -58,6 +58,8 @@ const Tab = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  //add new task function. Task information will be stored in addNew object and then dispatched addTask with addNew object inside
   const addNewTask = () => {
     const addNew = {
       taskName: addTaskName,
@@ -74,12 +76,12 @@ const Tab = () => {
       setOpen(false)
     }
   }
-  //variable for handling update
+  //variable for handling adding
   const [addTaskName, setAddTaskName] = useState("")
   const [addTaskDescription, setAddTaskDescription] = useState("")
 
 
-  // handle onchange updating new task
+  // handle onchange adding new task
   const handleName = (e) => {
     setAddTaskName(e.target.value)
   }
@@ -155,7 +157,7 @@ const Tab = () => {
           }
         })}
       </ul>
-
+      {/* Add new task dialog */}
       <div>
         <Dialog
           open={open}

@@ -19,6 +19,7 @@ const Task = () => {
 
   // get specific task from redux store.
   const task = useSelector((state) => state.currentTask)
+  const dispatch = useDispatch()
 
   useEffect(() => {
     if (task.length === 1) {
@@ -28,9 +29,7 @@ const Task = () => {
     }
   }, [task])
 
-  const dispatch = useDispatch()
-
-  // dialog
+  // updating dialog
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -41,6 +40,8 @@ const Task = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  //update task function. updated information will be stored in updateTask object and send to redux action to update
   const updateTask = () => {
     const taskUpdate = {
       taskName: taskNumberUpdate,
@@ -54,12 +55,11 @@ const Task = () => {
       setOpen(false)
     }
   }
+
   //variable for handling update
   const [taskNumberUpdate, setTaskNumberUpdate] = useState("")
   const [descriptionUpdate, setDescriptionUpdate] = useState("")
   const [id, setId] = useState("")
-
-
 
   // handle onchange updating new task
   const handleNameUpdate = (e) => {
@@ -69,10 +69,10 @@ const Task = () => {
     setDescriptionUpdate(e.target.value)
   }
 
-
   return (
     <div>
       <NavBar />
+      {/* display task information */}
       <div className='task-description'>
         <div></div>
         <div className='description-container'>
@@ -86,6 +86,7 @@ const Task = () => {
         </div>
         <div></div>
       </div>
+      {/* update task dialog */}
       <div>
         <Dialog
           open={open}
